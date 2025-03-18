@@ -11,6 +11,10 @@ public class TC_001LoginTest extends ProjectSpecificationMethods {
 	public void setup() {
 		
 		sheetname="LoginData";
+		testName="Login test";
+		testAuthor="Sharmila";
+		testCategory="Smoketest";
+		testDescription="Login test with positive scenarios";
 		
 	}
 	
@@ -18,6 +22,13 @@ public class TC_001LoginTest extends ProjectSpecificationMethods {
 	public void loginTest(String name,String pass, String testType,String expectedText) {
 		
 		LoginPage obj = new LoginPage(driver);
+		
+		
+		obj.enterUserName(name)
+		.enterPassword(pass)
+		.clickLogin()
+		.validateLogin(testType, expectedText);
+		    
 		
 	}
 }

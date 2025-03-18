@@ -99,7 +99,7 @@ public class Utility {
 	
 	public static String screenshot(String name) throws IOException {
 		
-		String path="D:\\JavaWorkspace\\OrangeHRMTestNGFrameWk\\Screenchot\\"+name+".png";
+		String path="D:\\JavaWorkspace\\OrangeHRMTestNGFrameWk\\screenshot"+name+".png";
 		File src =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		File dest = new File(path);
 		FileUtils.copyFile(src, dest);
